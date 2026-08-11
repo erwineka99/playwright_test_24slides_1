@@ -38,6 +38,6 @@ test('user can open report fraud page without submitting data', async ({ page })
   await homePage.gotoReportFraud();
 
   await expect(page).toHaveURL(/\/report/);
-  await expect(page.getByRole('heading', { name: 'Lapor Penipuan Online' })).toBeVisible();
+  await expect(page.getByRole('heading', { name: 'Lapor Penipuan Online', level: 1 })).toBeVisible();
   await expect(page.getByText('Nomor Rekening').first()).toBeVisible();
 });
